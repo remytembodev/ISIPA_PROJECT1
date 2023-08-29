@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  header{
+    background-image: url("fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+  }
+form{
+    background-image: linear-gradient(to right, rgb(27, 27, 27) , rgb(200, 214, 214));
+    padding:2% 20%;
+    box-sizing: border-box;
+}
+input[type=text], input[type=date],input[type=number],input[type=email]{
+    width: 100%;
+    margin: 10px 0px;
+    outline: none;
+    padding:  5px;
+    box-sizing: border-box;
+}
+.first-part, .second-part, .third-part, .fourth-part{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding:2% 15% ;
+    margin-bottom: 5%;
+    background-color: white;
+    border-radius: 20px; 
+}
+
+label{
+    margin-top: 10px;
+}
+select{
+    width: 100%;
+    margin: 10px 0px;
+    outline: none;
+    padding:  5px;
+    box-sizing: border-box;
+}
+legend{
+    font-size: larger;
+    color: silver;
+    padding-bottom: 3%;
+    border-bottom: solid silver 1px ;
+    margin-bottom: 3%;
+}
+.first-part >a, .second-part> a, .third-part> a, .fourth-part > a{
+    text-decoration: none;
+    color: black;
+    background-color: silver;
+    padding: 5x;
+    border-radius: 50px;
+    margin-top: 5%;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+input[type=submit]{
+    background-color: rgb(17, 90, 143);
+    padding: 10px 25px;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px white;
+    font-size: larger;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    transition: all .3s;
+    margin: 10px 0px;
+  }
+  input[type=submit]:hover{
+    opacity: .8;
+    color: black;
+  }
+  input[type=radio]{
+    margin: 10px 0px;
+    font-size: 15px;
+  }
+  h2{
+    text-align: center;
+    margin: 10px 0px;
+    color: brown;
+  }
+
+  /* Responsive phone */
+
+  @media (max-width:900px) {
+        .first-part, .second-part, .third-part, .fourth-part{
+        box-shadow: 0 4px 8px 0 rgba(187, 187, 187, 0.2), 0 6px 20px 0 rgba(248, 248, 248, 0.19);
+        padding: 5% ;
+        margin-bottom: 5%;
+    }
+    input[type=submit]{
+        margin-top: 5%;
+        background-color: rgb(0, 82, 204);
+        padding: 10px 15px;
+        outline: none;
+        border: none;
+        font-size: medium;
+        border-radius: 30px;
+      }
+      form{
+        padding: 3%;
+        box-sizing: border-box;
+    }
+    table{
+        width: 100%;
+    }
+  }

@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 500vw;
+    flex-direction: column;
+}
+input[type=text]{
+    width: 400px;
+    padding: 3px;
+    margin: 5px;
+}
+label{
+    text-align: start;
+}
+input[type=submit]{
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background: #aa1b2a;
+    flex-direction: row;
+    cursor: pointer;
+}

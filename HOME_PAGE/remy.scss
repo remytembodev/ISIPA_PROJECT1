@@ -1,0 +1,247 @@
+$isipa-pink:pink;
+$isipa-yellow:rgb(209, 193, 49);
+$isipa-white:#fff;
+$isipa-black:#111;
+$isipa-red :rgb(214, 64, 64);
+@mixin flexmid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin flexline {
+    display: inline-flex;
+    align-items: center;
+}
+@mixin disBlock {
+    display: block;
+}
+@mixin back {
+    background-image: url('./img/isipa_back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;      
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+// Background Slider
+
+body{
+    @include back();
+}
+ 
+
+// barre de navigation
+
+
+ .navbar{
+    position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 20px 10px;
+background: transparent;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 99;
+//     @include flexline();
+//     width: 100%;
+//     justify-content: center;
+//     background: $isipa-pink;
+//     .menu-bar{
+//         ul{
+//             justify-content: center;
+//             text-align: center;
+//         }
+//     }
+}
+h1{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideright .5s ease forwards; 
+}
+.menu-bar{
+    a{
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 35px;
+        transition: .5s;
+        animation: slidetop .5s ease forwards;
+        animation-delay:calc(.2s * var(--i)) ;
+        opacity: 0;  
+        &:hover{
+            color: #0ef;
+        }
+    }
+//     ul{
+//         @include flexline();
+//         list-style: none;
+//         justify-content: center;
+//         color: $isipa-pink;
+//         #connexion{
+//             a{
+//                 background: $isipa-white;
+//                 padding: 13px;
+//                 margin-left: 2px;
+//                 text-align: center;
+//                 justify-content: center;
+//                 border-radius: 7px;
+//                 transition: .3s;
+//                 color: $isipa-black;
+//                 &:hover{
+//                     opacity: .8;   
+//                     padding: 13.5px;
+//                     border: none;
+//                 }
+//             }
+       }
+//         li{
+//             width: 90px; 
+//             margin: 5px 20px;
+//             padding: 5px;
+//             text-align: center;
+//             a{
+//                 text-decoration: none;
+//                 padding: 13px;
+//                 font-size: 20px;
+//                 font-weight: bolder;
+//                 &:hover{
+//                     padding: 13px;
+//                     border-bottom: 1px solid $isipa-black;
+//                     border-radius: 7px;
+//                     transition: .3s;
+//                     color: $isipa-yellow;
+//                 }
+//             }
+//         }
+//         h1{
+//             color: $isipa-yellow;
+//             font-size: 45px;
+//         }
+//         h2{
+//             color: $isipa-red;
+//             margin: 25px 1px;
+//             font-size: 18px;
+//         }
+//     }
+// }
+
+// 
+.home{
+    // position: relative;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // padding: 70px 20px 0;
+    @include flexmid();
+    text-align: center;
+    .home-content{
+        max-width: 600px;
+        margin-top: 50px;
+       
+        h2{
+            font-size: 20px;
+            font-weight: 700px;
+            span{
+                color: #0ef;
+            }
+            &:nth-of-type(2){
+                margin-bottom: 30px;
+            }
+        }
+        h1{
+            
+            font-size: 56px;
+            font-weight: 700px;
+            margin: -3px 0;
+            color: $isipa-white;
+        }
+        #lorem{
+            text-align: center;
+            font-size: 34px;
+        }
+        p{
+            text-align: center;
+            font-size: 18px;
+            color: $isipa-white;
+        }
+        .social-media{
+            margin-top: 50px;
+            a{
+                display: inline-flex;
+                justify-content: center;
+                width: 20px;
+                height: 20px;
+                background: rgb(209, 188, 188);
+                border: 2px solid #0ef;
+                border-radius: 50%;
+                font-size: 20px;
+                color: #0ef;
+                text-decoration: none;
+                padding: 10px;
+                margin: 70px 15px 30px 0;
+                transition: .5s ease;
+                &:hover{
+                    background: #0ef;
+                    color: #1f242d;
+                    box-shadow: 0 0 20px #0ef;
+                }
+            }
+        }
+        .btn{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 70px;
+            button{
+                padding: 15px 30px;
+                border-radius: 40px;
+                background: $isipa-pink;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                transform: all .3s;
+                a{
+                    text-decoration: none;
+                    color: $isipa-red;
+                }
+                &:hover{
+                    opacity: .9;
+                }
+            }
+           
+            
+            a{
+                // margin: 8px;
+                // padding: 18px 18px;
+                // text-decoration: none;
+                // color: #1f242d;
+                // letter-spacing: 1px;
+                // font-weight: 600; 
+                // background: #0ef;
+                // border-radius: 40px;
+                // box-shadow: 0 0 10px #0ef;
+                &:hover{
+                    box-shadow: none;
+                    opacity: .8;
+                }
+            }
+        }
+        
+    }
+    .right{
+        // @include flexline();
+        width: 100%;
+        // text-align: center;
+    }
+}

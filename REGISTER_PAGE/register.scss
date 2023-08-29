@@ -1,0 +1,14 @@
+@mixin flexmid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body{
+    @include flexmid();
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}

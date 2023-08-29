@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("./img/isipa_back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+
+h1 {
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+  opacity: 0;
+  animation: slideright 0.5s ease forwards;
+}
+
+.menu-bar a {
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 35px;
+  transition: 0.5s;
+  animation: slidetop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+  opacity: 0;
+}
+.menu-bar a:hover {
+  color: #0ef;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.home .home-content {
+  max-width: 600px;
+  margin-top: 50px;
+}
+.home .home-content h2 {
+  font-size: 20px;
+  font-weight: 700px;
+}
+.home .home-content h2 span {
+  color: #0ef;
+}
+.home .home-content h2:nth-of-type(2) {
+  margin-bottom: 30px;
+}
+.home .home-content h1 {
+  font-size: 56px;
+  font-weight: 700px;
+  margin: -3px 0;
+  color: #fff;
+}
+.home .home-content #lorem {
+  text-align: center;
+  font-size: 34px;
+}
+.home .home-content p {
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.home .home-content .social-media {
+  margin-top: 50px;
+}
+.home .home-content .social-media a {
+  display: inline-flex;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  background: rgb(209, 188, 188);
+  border: 2px solid #0ef;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #0ef;
+  text-decoration: none;
+  padding: 10px;
+  margin: 70px 15px 30px 0;
+  transition: 0.5s ease;
+}
+.home .home-content .social-media a:hover {
+  background: #0ef;
+  color: #1f242d;
+  box-shadow: 0 0 20px #0ef;
+}
+.home .home-content .btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.home .home-content .btn button {
+  padding: 15px 30px;
+  border-radius: 40px;
+  background: pink;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transform: all 0.3s;
+}
+.home .home-content .btn button a {
+  text-decoration: none;
+  color: rgb(214, 64, 64);
+}
+.home .home-content .btn button:hover {
+  opacity: 0.9;
+}
+.home .home-content .btn a:hover {
+  box-shadow: none;
+  opacity: 0.8;
+}
+.home .right {
+  width: 100%;
+}/*# sourceMappingURL=remy.css.map */

@@ -24,7 +24,7 @@ try {
 
     //Recipients
     $mail->setFrom('remytembo4@gmail.com', 'ISIPA/MATADI');
-    $mail->addAddress('rogerkhasaraw@gmail.com', 'Etudiant(e)');     //Add a recipient
+    $mail->addAddress($email, 'Etudiant(e)');     //Add a recipient
     // $mail->addAddress('ellen@example.com');               //Name is optional
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
@@ -42,7 +42,26 @@ try {
 
     $mail->send();
     echo 'Message envoyé avec succès';
+    header("location:student.php?student=$user");
 } catch (Exception $e) {
     echo "Le message n'est pas envoyé erreur: {$mail->ErrorInfo}";
 }
+
+
+
+// $mail = $email;
+        // $subject = "Vos identifiant de connexion";
+        // $message = "votre nom d'utilisateur est : $username et votre mot de passe est : $pass ";
+        // $header = "content type: text/plain; charset=utf-8\r\n";
+        // $header .= "From : remytembo4@gmail.com \r\n";
+        // $envoi = mail($mail,$subject,$message,$header); 
+        header("location:mail.php?email=$email");
+        // 
+        // if ($envoi){
+          
+        //   // echo "message envoyé";
+        // }
+        // else{
+        //   echo "une erreur est survenue";
+        // }
 ?>

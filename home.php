@@ -43,8 +43,8 @@ session_start();
         </div>
         <ul>
           <li><a href="result.php">RESULTAT</a></li>
-          <li><a href="#">BIBLIOTHEQUE</a></li>
-          <li><a href="#">PAIEMENT</a></li>
+          <li><a href="showbooks.php">BIBLIOTHEQUE</a></li>
+          <li><a href="paiement.php">PAIEMENT</a></li>
         </ul>
         <a href="logout.php">DECONNEXION</a>
       </nav>

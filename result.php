@@ -48,8 +48,8 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Etudiant</title>
-    <link rel="stylesheet" href="RESULT/result.css">
+    <title>CONSULTATION DES RESULTATS</title>
+    <link rel="stylesheet" href="RESULT/shownote.css">
     <!-- <link rel="stylesheet" href="RESULT/addnote.css"> -->
 </head>
 <body>
@@ -71,59 +71,50 @@ session_start();
     <!-- / HEADER -->
   <!-- page content -->
     <main>
-      <div class="container">
-        <div class="center">
-            <img src="Home_PAGE/img/avatar.jpg" alt="">
-              <div class="name">
-                <p>Nom : <?php echo $nom;  ?></p>
-                <p>Post-Nom : <?php echo $post;  ?></p>
-                <p>Prenom : <?php echo $prenom;  ?></p>
-              </div>
-        </div> 
-      </div> 
-          <div class="containere">
+    <div class="container">
         <div class="noteblock">
             <label for="info">INFO FOND</label>
-            <input type="text" name="info" id="" value="<?php echo $info;?>" readonly>
+            <input type="text" name="info" id="">
             <label for="info">PHYSIQUE</label>
-            <input type="text" name="physique" id="" value="<?php echo $physique;?>">
+            <input type="text" name="physique" id="">
             <label for="info"> ELECTRO GEN</label>
-            <input type="text" name="electro_gen" id="" value="<?php echo $electro_gen;?>">
+            <input type="text" name="electro_gen" id="">
             <label for="info">ANALYSE VECTORIELLE</label>
-            <input type="text" name="analyse" id="" value="<?php echo $analyse;?>">
+            <input type="text" name="analyse" id="">
             <label for="info">SANTE PUBLIQUE</label>
-            <input type="text" name="sante" id="" value=" <?php echo $sante;?>">
+            <input type="text" name="sante" id="">
             <label for="info"> POURCENTAGE</label>
             <input type="text" name="percent" id="">
         </div>
         <div class="noteblock">
             <label for="info">SYSTEME D'EXPLOITATION</label>
-            <input type="text" name="se" id="" value="<?php echo $se;?>">
+            <input type="text" name="se" id="">
             <label for="info">SCHEMAS ELECTRIQUE</label>
-            <input type="text" name="schemas" id="" value="<?php echo $schemas;?>">
+            <input type="text" name="schemas" id="">
             <label for="info">EDUCATION A LA CITOYENNETE</label>
-            <input type="text" name="educit" id="" value="<?php echo $algo;?>">
+            <input type="text" name="educit" id="">
             <label for="info">ALGORITHME ET LANGAGE DE PROGRAMMATION</label>
-            <input type="text" name="algo" id="" value="<?php echo $algo;?>">
+            <input type="text" name="algo" id="">
             <label for="info">MATHEMATIQUE</label>
-            <input type="text" name="math" id="" value="<?php echo $math;?>">
+            <input type="text" name="math" id="">
             <label for="info">ANGLAIS TECHNIQUE</label>
-            <input type="text" name="anglais" id="" value="<?php echo $anglais;?>">
+            <input type="text" name="anglais" id=""> <br>
+            <input type="submit" value="Ajouter" name="ajout">
             
         </div>
         <div class="noteblock">
         <label for="info">ELECTRONIQUE DIGITALE</label>
-            <input type="text" name="electro_digi" id="" value="<?php echo $electro_digi;?>">
+            <input type="text" name="electro_digi" id="">
             <label for="info">LEEO</label>
-            <input type="text" name="leeo" id="" value="<?php echo $leeo;?>">
+            <input type="text" name="leeo" id="">
             <label for="info">MESURE ELECTRIQUE</label>
-            <input type="text" name="mesure" id="" value="<?php echo $mesure;?>">
+            <input type="text" name="mesure" id="">
             <label for="info">FRANCAIS</label>
-            <input type="text" name="francais" id="" value="<?php echo $francais;?>">
+            <input type="text" name="francais" id="">
             <label for="info">PROJET</label>
-            <input type="text" name="projet" id="" value="<?php echo $projet;?>">
+            <input type="text" name="projet" id="">
             <label for="info">TECHNOLOGIE DES COMPOSANTS</label>
-            <input type="text" name="techno" id="" value="<?php echo $techno;?>">
+            <input type="text" name="techno" id="">
             <LAbel>MENTION</LAbel><select name="mention" id="">
                 <option value="Satisfaction">Satisfaction</option>
                 <option value="Distinction">Distinction</option>
@@ -133,7 +124,6 @@ session_start();
             </select>
         </div>
     </div>
-    </main>
   <!-- page content -->
 </body>
 </html>

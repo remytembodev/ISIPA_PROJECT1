@@ -1,8 +1,10 @@
 <?php
     session_start();
-    $user = $_SESSION['utilsateur'];
+    $user = $_SESSION['utilisateur'];
     if ($user){
       
+    }else{
+        header("location : index.php");
     }
 ?>
 
@@ -56,7 +58,7 @@
         </div>
         <ul>
           <li><a href="result.php">RESULTAT</a></li>
-          <li><a href="showbooks.php">BIBLIOTHEQUE</a></li>
+          <li><a href="home.php">PROFIL</a></li>
           <li><a href="paiement.php">PAIEMENT</a></li>
         </ul>
         <a href="logout.php">DECONNEXION</a>
@@ -68,51 +70,51 @@
         <div class="showbooks">
             <div class="show">
                 <img src="img/7 1.svg" alt="">
-                <button type="button">Lire</button>
+                <button type="button"><a href="livres/kk.pdf" style="color:white;">Lire</a></button>
             </div>
             <div class="show">
                 <img src="img/4 2.svg" alt="">
-                <button type="button">Lire</button>
+                <button type="button"><a href="livres/kk.pdf" style="color:white;">Lire</a></button>
             </div>
             <div class="show">
                 <img src="img/7 1.svg" alt="">
-                <button type="button">Lire</button>
+                <button type="button"><a href="livres/kk.pdf" style="color:white;">Lire</a></button>
             </div>
             <div class="show">
                 <img src="img/4 2.svg" alt="">
-                <button type="button">Lire</button>
+                <button type="button"><a href="livres/kk.pdf" style="color:white;">Lire</a></button>
             </div>
             <div class="show">
                 <img src="img/7 1.svg" alt="">
-                <button type="button">Lire</button>
+                <button type="button"><a href="livres/kk.pdf" style="color:white;">Lire</a></button>
             </div>
             <div class="show">
                 <img src="img/4 2.svg" alt="">
-                <button type="button">Lire</button>
+                <button type="button"><a href="livres/kk.pdf" style="color:white;">Lire</a></button>
             </div>
             <div class="show">
                 <img src="img/1 1.svg" alt="">
-                <button type="button">Lire</button>
+                <button type="button"><a href="livres/kk.pdf" style="color:white;">Lire</a></button>
             </div>
             <div class="show">
                 <img src="img/2 2.svg" alt="">
-                <button type="button">Lire</button>
+                <button type="button"><a href="livres/kk.pdf" style="color:white;">Lire</a></button>
             </div>
             <div class="show">
                 <img src="img/3 1.svg" alt="">
-                <button type="button">Lire</button>
+                <button type="button"><a href="livres/kk.pdf" style="color:white;">Lire</a></button>
             </div>
             <div class="show">
                 <img src="img/3 2.svg" alt="">
-                <button type="button">Lire</button>
+                <button type="button"><a href="livres/kk.pdf" style="color:white;">Lire</a></button>
             </div>
             <div class="show">
                 <img src="img/4 1.svg" alt="">
-                <button type="button">Lire</button>
+                <button type="button"><a href="livres/kk.pdf" style="color:white;">Lire</a></button>
             </div>
             <div class="show">
                 <img src="img/4 2.svg" alt="">
-                <button type="button">Lire</button>
+                <button type="button"><a href="livres/kk.pdf" style="color:white;">Lire</a></button>
             </div>
         </div>
     </div>

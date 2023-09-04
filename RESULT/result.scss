@@ -7,6 +7,10 @@
     display: inline-flex;
     align-items: center;
 }
+@mixin Flex{
+    display: flex;
+    align-items: center;
+}
 @mixin disBlock {
     display: block;
 }
@@ -21,11 +25,15 @@
 *{
     margin: 0;
     padding: 0;
-}
-#loyenge{
-    @include back();
     box-sizing: border-box;
 }
+main{
+    height: 100vh;
+}
+// #loyenge{
+//     // @include back();
+//     // box-sizing: border-box;
+// }
 // navigation bar
 .menubar{
     background: #7654d3
@@ -89,8 +97,23 @@ nav{
 .container{
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    max-width: 600vw;
+    // min-height: 100vh;
+    // max-width: 600vw;
     justify-content: center;
     align-items: center;
+}
+.containere{
+    @include Flex();
+    justify-content: space-around;
+    // height: 100vh;
+    .noteblock{
+        // margin: 0px 20px;
+        @include flexMid();
+        flex-direction: column;
+        input[type=text]{
+            // width: 100%;
+            outline: none;
+            border: none;
+        }
+    }
 }

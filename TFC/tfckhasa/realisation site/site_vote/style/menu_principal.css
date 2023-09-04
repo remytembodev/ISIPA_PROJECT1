@@ -1,0 +1,171 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  background-color: whitesmoke;
+}
+.logo_ceni3{
+  display: none;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 2px 5px;
+}
+
+nav ul li {
+  display: inline-flex;
+}
+
+.tete {
+  background-color: #01619E;
+  padding: 5px;
+}
+nav h3{
+  display: none;
+}
+nav ul li img {
+  width: 20px;
+}
+
+.tete>nav>ul>li{
+  padding: 10px;
+}
+
+nav ul li:hover {
+  background-color: black;
+  border-radius: 5px;
+}
+
+
+.corps a:hover  {
+    background-color: black;
+}
+
+.corps a img {
+  width: 20px;
+}
+
+.corps a {
+  background-color: #01619E;
+  margin-top: 5%;
+  padding: 8px 20px;
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bolder;
+  box-sizing: border-box;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+  line-height: 1em;
+  transition: 0.3s;
+  
+}
+.corps>.choix>a:nth-child(odd) {
+  background: linear-gradient(to right, #01619E, #052c44 );
+  text-align: left;
+  padding-left: 10%;
+  transform: perspective(500px) rotateY(45deg);
+}
+.corps>.choix>a:nth-child(even) {
+  background: linear-gradient(to left, #01619E, #052c44   );
+  text-align: right;
+  padding-right: 10%;
+  transform: perspective(500px) rotateY(-45deg);
+}
+.corps>.choix>a:nth-child(odd):hover{
+  transform: perspective(200px) rotateY(45deg);
+  padding-left: 5%;
+}
+.corps>.choix>a:nth-child(even):hover{
+  transform: perspective(200px) rotateY(-45deg);
+  padding-right: 5%;
+}
+
+
+
+.corps {
+  display: flex;
+  justify-content: center;
+}
+
+.bienvenu{
+  text-align: center;
+}
+.logo_ceni{
+  transform: translateX(0px);
+  animation: float 3s ease-out infinite;
+}
+
+
+
+
+@keyframes float {
+  0%{
+      transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(-60px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+  
+}
+
+@media (max-width: 720px) {
+  .tete nav ul li{
+    display: none;
+
+  }
+  .tete{
+    padding: 1px;
+  }
+  .tete nav h3{
+    display: block;
+    color:white;
+    position:relative;
+    margin-top:-1%;
+    margin-left:-3%;
+    text-decoration: overline red;
+  }
+  .tete nav h3 img{
+    width: 40px;
+    height: 40px;
+  }
+  .logo_ceni{
+    display: none;
+  }
+  .corps{
+    justify-content: center;
+    position: absolute;
+    top:50%;
+    left: 45%;
+    transform: translate(-50%,-50%);
+  }
+  .logo_ceni3{
+    display: block;
+    width: 80px;
+    position: absolute;
+    top: 0;
+    right: 2%;
+    transform: translateX(0px);
+    animation: logo_ceni3 3s ease-out infinite;
+  }
+  @keyframes logo_ceni3 {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+      transform: translateY(-10px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+    
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,78 @@
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 2px 5px;
+}
+
+nav ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0% 1%;
+}
+
+.tete {
+  background-color: navy;
+  padding: 5px;
+}
+
+nav ul li img {
+  width: 20px;
+}
+
+nav ul li:hover {
+  background-color: blue;
+  border-radius: 5px;
+}
+
+.corps ul li {
+  display: block;
+}
+
+.corps ul li img {
+  width: 20px;
+}
+
+.corps .choix {
+  background-color: navy;
+  margin-top: 5%;
+  padding: 8px 20px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.choix a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.choix a:hover {
+  color: black;
+}
+
+.corps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 720px) {
+  .tete {
+    display: none;
+  }
+  .logo_ceni{
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

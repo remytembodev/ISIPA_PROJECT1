@@ -1,0 +1,43 @@
+/* page enregistrement*/
+.enregistrement input[type="text"],input[type="password"]{
+    padding: 8px 50px;
+    outline: none;
+    text-align: left;
+}
+.enregistrement{
+    font-size: 15px;
+    position: absolute;
+    top:10%;
+    left: 35%;
+    background-image: url(img/images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 60px;
+    border-radius: 10px;
+}
+.enregistrement input{
+    margin: 3px;
+}
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+label{
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+body{
+    background-color: rgb(240, 250, 252);
+ }
+h2{
+    color: blue;
+    font-weight: bolder;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+} 
+.enregistrement input[type="submit"]{
+    padding: 8px 105px;
+    background-color: green;
+    border: white solid 1px;
+    
+}

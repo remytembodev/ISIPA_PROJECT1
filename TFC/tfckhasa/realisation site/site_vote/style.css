@@ -1,0 +1,22 @@
+.identi{
+    margin-top: 10%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+body{
+   background-color: rgb(240, 250, 252);
+}
+
+
+
+
+
+/*Responsive*/
+
+@media (max-width:720px) {
+    .identi{
+        margin-top: 50%;
+    }
+}
+
+

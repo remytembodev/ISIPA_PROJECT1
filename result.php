@@ -49,7 +49,8 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Etudiant</title>
-    <link rel="stylesheet" href="./result/result.css">
+    <link rel="stylesheet" href="RESULT/result.css">
+    <!-- <link rel="stylesheet" href="RESULT/addnote.css"> -->
 </head>
 <body>
      <!-- HEADER -->
@@ -73,32 +74,65 @@ session_start();
       <div class="container">
         <div class="center">
             <img src="Home_PAGE/img/avatar.jpg" alt="">
-            <div class="name">
-              <p>Nom : <?php echo $nom;  ?></p>
-              <p>Post-Nom : <?php echo $post;  ?></p>
-              <p>Prenom : <?php echo $prenom;  ?></p>
-            </div>
-  
-          <div class="part1">
-            <label for="">INFORMATIQUE FONDAMENTAL : <?php echo $info;?></label> 
-            <label for="">PHYSIQUE : <?php echo $physique;?></label> 
-            <label for="">ELECTRONIQUE GENERALE : <?php echo $electro_gen;?></label> 
-            <label for="">ANALYSE VECTORIELLE : <?php echo $analyse;?></label> 
-            <label for="">SANTE PUBLIQUE : <?php echo $sante;?></label> 
-            <label for="">SYSTEME D'EXPLOITATION : <?php echo $se;?></label> 
-            <label for="">SCHEMAS ELECTRIQUE : <?php echo $schemas;?></label> 
-            <label for="">EDUCATION A LA CITOYENNETE : <?php echo $educit;?></label> 
-            <label for="">ALGORITHME ET PROGRAMMATION : <?php echo $algo;?></label> 
-            <label for="">MATHEMATIQUE : <?php echo $math;?></label> 
-            <label for="">ANGLAIS TECHNIQUE : <?php echo $anglais;?></label> 
-            <label for="">ELECTRIQUE DIGITALE : <?php echo $electro_digi;?></label> 
-            <label for="">LEEO : <?php echo $leeo;?></label> 
-            <label for="">MESURE ELECTRIQUE : <?php echo $mesure;?></label> 
-            <label for="">FRANCAIS : <?php echo $francais;?></label> 
-            <label for="">PROJET : <?php echo $projet;?></label> 
-            <label for="">TECHNOLOGIE DES COMPOSANTS : <?php echo $techno;?></label> 
-          </div>
-      </div>
+              <div class="name">
+                <p>Nom : <?php echo $nom;  ?></p>
+                <p>Post-Nom : <?php echo $post;  ?></p>
+                <p>Prenom : <?php echo $prenom;  ?></p>
+              </div>
+        </div> 
+      </div> 
+          <div class="containere">
+        <div class="noteblock">
+            <label for="info">INFO FOND</label>
+            <input type="text" name="info" id="" value="<?php echo $info;?>" readonly>
+            <label for="info">PHYSIQUE</label>
+            <input type="text" name="physique" id="" value="<?php echo $physique;?>">
+            <label for="info"> ELECTRO GEN</label>
+            <input type="text" name="electro_gen" id="" value="<?php echo $electro_gen;?>">
+            <label for="info">ANALYSE VECTORIELLE</label>
+            <input type="text" name="analyse" id="" value="<?php echo $analyse;?>">
+            <label for="info">SANTE PUBLIQUE</label>
+            <input type="text" name="sante" id="" value=" <?php echo $sante;?>">
+            <label for="info"> POURCENTAGE</label>
+            <input type="text" name="percent" id="">
+        </div>
+        <div class="noteblock">
+            <label for="info">SYSTEME D'EXPLOITATION</label>
+            <input type="text" name="se" id="" value="<?php echo $se;?>">
+            <label for="info">SCHEMAS ELECTRIQUE</label>
+            <input type="text" name="schemas" id="" value="<?php echo $schemas;?>">
+            <label for="info">EDUCATION A LA CITOYENNETE</label>
+            <input type="text" name="educit" id="" value="<?php echo $algo;?>">
+            <label for="info">ALGORITHME ET LANGAGE DE PROGRAMMATION</label>
+            <input type="text" name="algo" id="" value="<?php echo $algo;?>">
+            <label for="info">MATHEMATIQUE</label>
+            <input type="text" name="math" id="" value="<?php echo $math;?>">
+            <label for="info">ANGLAIS TECHNIQUE</label>
+            <input type="text" name="anglais" id="" value="<?php echo $anglais;?>">
+            
+        </div>
+        <div class="noteblock">
+        <label for="info">ELECTRONIQUE DIGITALE</label>
+            <input type="text" name="electro_digi" id="" value="<?php echo $electro_digi;?>">
+            <label for="info">LEEO</label>
+            <input type="text" name="leeo" id="" value="<?php echo $leeo;?>">
+            <label for="info">MESURE ELECTRIQUE</label>
+            <input type="text" name="mesure" id="" value="<?php echo $mesure;?>">
+            <label for="info">FRANCAIS</label>
+            <input type="text" name="francais" id="" value="<?php echo $francais;?>">
+            <label for="info">PROJET</label>
+            <input type="text" name="projet" id="" value="<?php echo $projet;?>">
+            <label for="info">TECHNOLOGIE DES COMPOSANTS</label>
+            <input type="text" name="techno" id="" value="<?php echo $techno;?>">
+            <LAbel>MENTION</LAbel><select name="mention" id="">
+                <option value="Satisfaction">Satisfaction</option>
+                <option value="Distinction">Distinction</option>
+                <option value="Grande Distinction">Grande Distinction</option>
+                <option value="Très Grande Distinction">Très Grande Distinction</option>
+                <option value="Elite">Elite</option>
+            </select>
+        </div>
+    </div>
     </main>
   <!-- page content -->
 </body>

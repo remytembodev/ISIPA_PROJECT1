@@ -1,4 +1,9 @@
 <?php
+session_start();
+$user = $_SESSION['utilsateur'];
+if ($user){
+  
+}
     if(isset($_POST['callbackUrl'])){
         include ('bdd.php');
     }

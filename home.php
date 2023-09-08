@@ -44,7 +44,7 @@ session_start();
         <ul>
           <li><a href="result.php">RESULTAT</a></li>
           <li><a href="showbooks.php">BIBLIOTHEQUE</a></li>
-          <li><a href="paiement.php">PAIEMENT</a></li>
+          <li><a href="paiement.php" target="_blank">PAIEMENT</a></li>
         </ul>
         <a href="logout.php">DECONNEXION</a>
       </nav>

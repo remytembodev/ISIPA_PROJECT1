@@ -49,7 +49,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONSULTATION DES RESULTATS</title>
-    <link rel="stylesheet" href="RESULT/shownote.css">
+    <link rel="stylesheet" href="RESULT/result.css">
     <!-- <link rel="stylesheet" href="RESULT/addnote.css"> -->
 </head>
 <body>
@@ -62,8 +62,8 @@ session_start();
         </div>
         <ul>
           <li><a href="home.php">PROFIL</a></li>
-          <li><a href="resulttm1.php">BIBLIOTHEQUE</a></li>
-          <li><a href="#">PAIEMENT</a></li>
+          <li><a href="showbooks.php">BIBLIOTHEQUE</a></li>
+          <li><a href="paiement.php" target="_blank">PAIEMENT</a></li>
         </ul>
         <a href="logout.php">DECONNEXION</a>
       </nav>

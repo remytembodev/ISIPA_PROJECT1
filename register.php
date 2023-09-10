@@ -113,7 +113,7 @@ if(isset($_POST['envoi'])){
                     <input type="number" name="tel" required=required>      
                 </div>
                 <div class="form second-part">
-                    <fieldset>
+            
                         <legend>Etudes secondaire faites</legend>
                         <label for="">Nom de l'école secondaire fréquenté : </label> 
                         <input type="text" name="ecole" required=required>
@@ -122,10 +122,10 @@ if(isset($_POST['envoi'])){
                         <label for="">Section suivie aux humanités : </label> <input type="text" name="section" required=required>
                         <label for="">Nom du centre de l'examen d'état : </label> <input type="text" name="centre" required=required>
                         <label for="">Année d'obtention du Diplôme d'état : </label> <input type="number" name="annee_diplome" required=required>
-                    </fieldset>
+                   
                 </div>
                 <div class="form third-part">
-                    <fieldset>
+                   
                         <div class="apres_bac">
                         <legend>Occupations après les humanités</legend>
                         <p>les éléves finalistes de l'année en cours ne rempliront pas les points suivants</p>
@@ -148,10 +148,10 @@ if(isset($_POST['envoi'])){
                             </tr>
                         </table>
                         </div>
-                    </fieldset>
+                   
                 </div>
                 <div class="form fourth-part">
-                    <fieldset>
+                   
                         <legend>Choix de la faculté</legend>
                         <p>Tout candidat est tenu de faire deux choix</p>
                         <label for="">1ère Choix</label> <select name="choix" id="" required=required>
@@ -172,7 +172,7 @@ if(isset($_POST['envoi'])){
                         <label for="">J'accepte</label> <input type="radio" name="yes" >
                         <label for="">Je n'accepte pas</label> <input type="radio" name="yes"><br>
                         <input type="submit" value="Soumettre" name="envoi">
-                    </fieldset>
+                 
                 </div>
             </div>
         </form>

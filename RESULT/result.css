@@ -75,8 +75,20 @@ nav a:hover {
 .container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  max-width: 600vw;
-  justify-content: center;
-  align-items: center;
+  
 }/*# sourceMappingURL=result.css.map */
+.part1{
+  display: flex;
+  box-shadow: 0px 10px 12px 0px rgb(0, 34, 253),0px 10px 12px 0px  rgb(0, 34, 253);
+  padding: 18px;
+  justify-content: space-around;
+  margin: 2%;
+  padding:40px 0px ;
+}
+.part1> div{
+  display: flex;
+  flex-direction: column;
+}
+.part1> div label,.name>p{
+  margin: 7px 0px;
+}

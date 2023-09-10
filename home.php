@@ -52,36 +52,7 @@ session_start();
     <!-- / HEADER -->
   <!-- page content -->
     <main>
-      <div class="container">
-        <aside class="left">
-            <ul>
-              <li><a href="#">Mon profil</a></li>
-              <li><a href="#">Mes resultats</a></li>
-              <li><a href="#">Calendrier Academiques</a></li>
-              <li><a href="#">Horaire des cours</a></li>
-              <li><a href="#">Annonces</a></li>
-            </ul>
-        </aside>
-        <div class="center">
-            <img src="Home_PAGE/img/avatar.jpg" alt="">
-            <div class="name">
-              <p>Nom : <?php echo $nom;  ?></p>
-              <p>Post-Nom : <?php echo $post;  ?></p>
-              <p>Prenom : <?php echo $prenom;  ?></p>
-            </div>
-        </div>
-        <aside class="right">
-            <P>EMAIL : <?php echo $email ?></P>
-            <P>Lieu de naissance : <?php echo $lieu ?></P>
-            <P>Date de naissance : <?php echo $date ?></P>
-            <P>Etat civil : <?php echo $etat ?></P>
-            <P>Nationalité : <?php echo $nationalite ?></P>
-            <P>Adresse : <?php echo $adresse ?></P>
-            <P>Telephone : <?php echo $tel ?></P>
-            <P>Faculté : <?php echo $faculte ?></P>
-            <P>Promotion : <?php echo $promotion ?></P>
-        </aside>
-      </div>
+     
     </main>
   <!-- page content -->
 </body>

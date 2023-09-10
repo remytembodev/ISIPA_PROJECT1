@@ -4,22 +4,17 @@ if (isset($_POST['envoi'])){
     include('bdd.php');
     $user =htmlspecialchars(strtoupper($_POST['user']));
     $pass =htmlspecialchars($_POST['pass']);
-    $rech = $bdd->prepare("SELECT user,pass,niveau FROM connexion WHERE user=?");
-    $rech->execute(array($user));
+    $rech = $bdd->prepare("SELECT user,no_hash,niveau FROM connexion WHERE user=? AND no_hash=?");
+    $rech->execute(array($user,$pass));
     $login = $rech->fetch();
     $connect = $rech->rowCount();
     // if ($connect != 0) {
-        if ($connect != 0){
+        if ($connect > 0){
                 $conn_user=$login['user'];
-                $conn_pass=$login['pass'];
+                $conn_pass=$login['no_hash'];
                 $level =$login['niveau'];
-                // $password = settype($pass, "string");
-                if(($user === $conn_user) and ($pass === $conn_pass)){
-                // $verif_pass =password_verify($pass, $conn_pass);
-                // if($verif_pass){
-                //     header("location:home.php");
-                //     exit;
-                // }
+                if(($user == $conn_user) and ($pass == $conn_pass)){
+
                     if($level === 'user'){
                         $_SESSION['utilisateur'] = $user;
                         header("location:home.php"); 
@@ -66,7 +61,7 @@ if (isset($_POST['envoi'])){
                 <i></i>
             </div>
             <div class="inputbox">
-                <input type="password" name="pass" >
+                <input type="password" name="pass">
                 <span>Mot de passe</span>
                 <i></i>
             </div>

@@ -66,49 +66,101 @@
 </head>
 <body>
     <form method="POST">
-        <label for="id_user">L'identifiant de l'étudiant</label>
-        <input type="text" name="id_user">
-        <label for="">INFORMATIQUE FONDAMENTAL</label>
-        <input type="text" name="info">
-        <label for="">PHYSIQUE</label>
-        <input type="text" name="physique">
-        <label for="">ELECTRONIQUE GENERALE</label>
-        <input type="text" name="electro_gen">
-        <label for="">ANALYSE VECTORIELLE</label>
-        <input type="text" name="analyse">
-        <label for="">SANTE PUBLIQUE</label>
-        <input type="text" name="sante">
-        <label for="">SYSTEME D'EXPLOITATION</label>
-        <input type="text" name="se">
-        <label for="">SCHEMAS ELECTRIQUE</label>
-        <input type="text" name="schemas">
-        <label for="">EDUCATIO A LA CITOYENNETE</label>
-        <input type="text" name="educit">
-        <label for="">ALGORITHME ET PROGRAMMATION</label>
-        <input type="text" name="algo">
-        <label for="">MATHEMATIQUE</label>
-        <input type="text" name="math">
-        <label for="">ANGLAIS TECHNIQUE</label>
-        <input type="text" name="anglais">
-        <label for="">ELECTRONIQUE DIGITALE</label>
-        <input type="text" name="electro_digi">
-        <label for="">LOGIQUE, EXPRESSION ECRITE ET ORALE</label>
-        <input type="text" name="leeo">
-        <label for="">MESURE ELECTRIQUE</label>
-        <input type="text" name="mesure">
-        <label for="">FRANCAIS</label>
-        <input type="text" name="francais">
-        <label for="">PROJET INFORMATIQUE</label>
-        <input type="text" name="projet">
-        <label for="">TECHNOLOGIE DES COMPOSANTS</label>
-        <input type="text" name="techno">
-        <label for="">POURCENTAGE</label>
-        <input type="text" name="percent">
-        <label for="">MENTION</label>
-        <input type="text" name="mention">
+        <table>
+        <tr>
+                <td><strong>identifiant de l'étudiant<strong></td>
+                <td> <input type="text" name="id_user"></td>
+            </tr>
+            <tr>
+                <td>INFORMATIQUE FONDAMENTAL</td>
+                <td><input type="text" name="info"></td>
+            </tr>
+            <tr>
+                <td>PHYSIQUE</td>
+                <td><input type="text" name="physique"></td>
+            </tr>
+            <tr>
+                <td>ELECTRONIQUE GENERALE</td>
+                <td><input type="text" name="electro_gen"></td>
+            </tr>
+            <tr>
+                <td>ANALYSE VECTORIELLE</td>
+                <td><input type="text" name="analyse"></td>
+            </tr>
+            <tr>
+                <td>SANTE PUBLIQUE</td>
+                <td><input type="text" name="sante"></td>
+            </tr>
+            <tr>
+                <td>SYSTEME D'EXPLOITATION</td>
+                <td><input type="text" name="se"></td>
+            </tr>
+            <tr>
+                <td>SCHEMAS ELECTRIQUE</td>
+                <td><input type="text" name="schemas"></td>
+            </tr>
+            <tr>
+                <td>EDUCATION A LA CITOYENNETE</td>
+                <td><input type="text" name="educit"></td>
+            </tr>
+            <tr>
+                <td>ALGORITHME ET PROGRAMMATION</td>
+                <td><input type="text" name="algo"></td>
+            </tr>
+            <tr>
+                <td>MATHEMATIQUE</td>
+                <td><input type="text" name="math"></td>
+            </tr>
+            <tr>
+                <td>ANGLAIS TECHNIQUE</td>
+                <td><input type="text" name="anglais"></td>
+            </tr>
+            <tr>
+                <td>ELECTRONIQUE DIGITALE</td>
+                <td><input type="text" name="electro_digi"></td>
+            </tr>
+            <tr>
+                <td>LOGIQUE, EXPRESSION ECRITE ET ORALE</td>
+                <td><input type="text" name="leeo"></td>
+            </tr>
+            <tr>
+                <td>MESURE ELECTRIQUE</td>
+                <td><input type="text" name="mesure"></td>
+            </tr>
+            <tr>
+                <td>MESURE ELECTRIQUE</td>
+                <td><input type="text" name="mesure"></td>
+            </tr>
+            <tr>
+                <td>FRANCAIS</td>
+                <td><input type="text" name="francais"></td>
+            </tr>
+            <tr>
+                <td>PROJET INFORMATIQUE</td>
+                <td><input type="text" name="projet"></td>
+            </tr>
+            <tr>
+                <td>TECHNOLOGIE DES COMPOSANTS</td>
+                <td><input type="text" name="techno"></td>
+            </tr>
+            <tr>
+                <td>POURCENTAGE</td>
+                <td><input type="text" name="percent"></td>
+            </tr>
+            <tr>
+                <td>MENTION</td>
+                <td><input type="text" name="mention"></td>
+            </tr>
+
+        </table>
+
+     
+     
+        
+
+        
         <input type="submit" value="Ajouter" name="ajout">
-        <input type="submit" value="Modifier" name="modifier">
-        <input type="submit" value="Supprimer" name="supprimer">
+    
     </form>
     <!-- <form method="POST">
         <table border="">

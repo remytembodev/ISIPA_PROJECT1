@@ -31,6 +31,8 @@ if(isset($_POST['envoi'])){
     $mention=htmlspecialchars($_POST['mention']);
     $choix=htmlspecialchars($_POST['choix']);
     $promotion=htmlspecialchars($_POST['promotion']);
+    $image = $_FILES['image']['name'];
+    $image_tmp = $_FILES['image_tmp']['tmp'];
 
     if((!empty($nom)) and (!empty($postnm)) and (!empty($prenom)) and (!empty($email)) and (!empty($lieu)) and (!empty($date)) and (!empty($etat)) and 
     (!empty($nationalite)) and (!empty($pere)) and (!empty($mere))and (!empty($province)) and (!empty($district)) and (!empty($territoire))
@@ -42,12 +44,14 @@ if(isset($_POST['envoi'])){
         $third = $prenom[0];
         $prom = $promotion;
         $user = $isipa.$first.$second.$third.$prom;
+        move_uploaded_file($image_tmp,"./images/".$image);
+        $chemin_image = ".images/$image";
         $req = $bdd->query("INSERT INTO inscription (iduser,NOM, POST_NOM, PRENOM, EMAIL, LIEU_NAISSANCE,DATE_NAISSANCE, ETAT_CIVIL, NATIONALITE, PERE,
          MERE, PROVINCE, DISTRICT, TERRITOIRE, ADRESSE, TELEPHONE, ECOLE, PROVINCE_ECOLE, TERRITOIRE_ECOLE, SECTION, CENTRE,
-         ANNEE_DIPLOME, ACTIVITE,ANNEE_ACADEMIQUE, TITRE_ACADEMIQUE, ETABLISSEMENT,ANNEE_ETUDE, MENTION, CHOIX, PROMOTION, Date_Inscription) 
+         ANNEE_DIPLOME, ACTIVITE,ANNEE_ACADEMIQUE, TITRE_ACADEMIQUE, ETABLISSEMENT,ANNEE_ETUDE, MENTION, CHOIX, PROMOTION, Date_Inscription,photo) 
          VALUES ('$user','$nom', '$postnm', '$prenom','$email', '$lieu', '$date', '$etat', '$nationalite', '$pere', '$mere', '$province', 
          '$district', '$territoire', '$adresse', '$tel', '$ecole', '$prov_ecole', '$terri_ecole', '$section', '$centre',
-         '$annee_diplome', '$activite','$annee_aca', '$titre_aca', '$Ets','$annee_etude','$mention', '$choix', '$promotion', '$date')");
+         '$annee_diplome', '$activite','$annee_aca', '$titre_aca', '$Ets','$annee_etude','$mention', '$choix', '$promotion', '$date', '$chemin_image')");
             if ($req){
               header("location:user.php?user=".$user);  
          } 
@@ -69,7 +73,7 @@ if(isset($_POST['envoi'])){
 </head>
 <body>
     <main>
-        <form action="" method="post" id="myform">
+        <form action="" method="post" id="myform" enctype="multipart/form-data">
             <div class="container">
                 <div class="form first-part">
                     <h2>FORMULAIRE D'INSCRIPTION</h2>
@@ -163,6 +167,7 @@ if(isset($_POST['envoi'])){
                             <option value="L1">L1 (classique)</option>
                             <option value="L2">L2 (classique)</option>
                         </select>
+                        <input type="file" name="image" id="image">
                         <p>Je certifie sur mon honneur que les renseignements ci-haut fournis sont exacts. Le paiement de certains frais est anticipatif pour confirmer l'inscription, je m'engage à payer les frais dans le délai indiqué. Les frais payés sont non remboursables. </p>
                         <label for="">J'accepte</label> <input type="radio" name="yes" >
                         <label for="">Je n'accepte pas</label> <input type="radio" name="yes"><br>

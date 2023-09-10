@@ -15,7 +15,7 @@ body {
     min-height: 100vh;
   }
 form{
-    background-image: linear-gradient(to right, rgb(27, 27, 27) , rgb(200, 214, 214));
+    background-image: linear-gradient(to right,rgb(79, 79, 79), rgb(255, 255, 255)  );
     padding:2% 20%;
     box-sizing: border-box;
 }

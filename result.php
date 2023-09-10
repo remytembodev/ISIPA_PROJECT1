@@ -70,7 +70,45 @@ session_start();
     </div>
     <!-- / HEADER -->
   <!-- page content -->
-    
+
+    <main>
+    <center>  
+      <div class="container" style="margin-top:4%">
+        <div class="center">
+            <img src="Home_PAGE/img/avatar.jpg" alt="" style="border-radius:50%">
+            <div class="name">
+              <p>Nom : <?php echo $nom;  ?></p>
+              <p>Post-Nom : <?php echo $post;  ?></p>
+              <p>Prenom : <?php echo $prenom;  ?></p>
+            </div>
+      </div>
+      </center>
+      <div class="part1">
+        <div>
+          <label for="">INFORMATIQUE FONDAMENTAL : <?php echo $info;?></label> 
+            <label for="">PHYSIQUE : <?php echo $physique;?></label> 
+            <label for="">ELECTRONIQUE GENERALE : <?php echo $electro_gen;?></label> 
+            <label for="">ANALYSE VECTORIELLE : <?php echo $analyse;?></label> 
+            <label for="">SANTE PUBLIQUE : <?php echo $sante;?></label> 
+            <label for="">SYSTEME D'EXPLOITATION : <?php echo $se;?></label> 
+            <label for="">SCHEMAS ELECTRIQUE : <?php echo $schemas;?></label> 
+            <label for="">EDUCATION A LA CITOYENNETE : <?php echo $educit;?></label> 
+            <label for="">ALGORITHME ET PROGRAMMATION : <?php echo $algo;?></label> 
+        </div>
+        <div>
+            <label for="">MATHEMATIQUE : <?php echo $math;?></label> 
+            <label for="">ANGLAIS TECHNIQUE : <?php echo $anglais;?></label> 
+            <label for="">ELECTRIQUE DIGITALE : <?php echo $electro_digi;?></label> 
+            <label for="">LEEO : <?php echo $leeo;?></label> 
+            <label for="">MESURE ELECTRIQUE : <?php echo $mesure;?></label> 
+            <label for="">FRANCAIS : <?php echo $francais;?></label> 
+            <label for="">PROJET : <?php echo $projet;?></label> 
+            <label for="">TECHNOLOGIE DES COMPOSANTS : <?php echo $techno;?></label> 
+        </div>  
+       
+       </div>
+    </main>
+
   <!-- page content -->
 </body>
 </html>

@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .formulaire{
+        width: 200px;
+
+        input,select{
+            width: 100%;
+            height: 5vh;
+            border: 1px solid rgb(126, 126, 243);
+            outline: none;
+            border-radius: 10px;
+            margin-top: 1%;
+        }
+        input[type=file]{
+            border: none;
+        }
+    }
+
+    .affichageLivre{
+        background-color: whitesmoke;
+        padding: 1%;
+        border-radius: 5px;
+        border:1px solid rgb(126, 126, 243);
+
+        a{
+            text-decoration: none;
+        }
+
+        table{
+            text-align: center;
+            th{
+                background-color: rgb(126, 126, 243);
+                border-radius: 5px;
+            }
+
+            #supprimer{
+                color: red;
+            }
+        }
+    }
+}
+
+@media(max-width:720px){
+    .affichageLivre{
+        display: none;
+    }
+    .formulaire{
+        width: 100px;
+    }
+}

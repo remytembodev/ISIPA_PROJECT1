@@ -31,18 +31,18 @@ session_start();
             $observe = 'TM3';
         }
         $req2 = $bdd->query("INSERT INTO etudiant(NOM, POST_NOM, PRENOM, EMAIL, LIEU_NAISSANCE, DATE_NAISSANCE, ETAT_CIVIL, NATIONALITE, ADRESSE, TELEPHONE, FACULTE, PROMOTION, USERNAME, OBSERVATION)
-        VALUES ('$nom', '$postnm', '$prenom','$email', '$lieu', '$date', '$etat', '$nationalite', '$adresse', '$tel', '$choix', '$promotion','$user')");
+        VALUES ('$nom', '$postnm', '$prenom','$email', '$lieu', '$date', '$etat', '$nationalite', '$adresse', '$tel', '$choix', '$promotion','$user','$observe')");
         if($req2){
             if (($choix==='TM') && ($promotion==='G1')){
-                $req3 = $bdd->query("INSERT INTO tm1(NOM, POST_NOM, PRENOM, EMAIL, LIEU_NAISSANCE, DATE_NAISSANCE, ETAT_CIVIL, NATIONALITE, ADRESSE, TELEPHONE, FACULTE, PROMOTION, USERNAME)
-                VALUES ('$nom', '$postnm', '$prenom','$email', '$lieu', '$date', '$etat', '$nationalite', '$adresse', '$tel', '$choix', '$promotion','$user', $observe)");
+                $req3 = $bdd->query("INSERT INTO tm1(NOM, POST_NOM, PRENOM, EMAIL, LIEU_NAISSANCE, DATE_NAISSANCE, ETAT_CIVIL, NATIONALITE, ADRESSE, TELEPHONE, FACULTE, PROMOTION, USERNAME, OBSERVATION)
+                VALUES ('$nom', '$postnm', '$prenom','$email', '$lieu', '$date', '$etat', '$nationalite', '$adresse', '$tel', '$choix', '$promotion','$user','$observe')");
                 if($req3){
                     header('location : login.php');    
                 }
         }
             else
             if (($choix==='TM') && ($promotion==='G2')){
-                $req4 = $bdd->query("INSERT INTO tm2(NOM, POST_NOM, PRENOM, EMAIL, LIEU_NAISSANCE, DATE_NAISSANCE, ETAT_CIVIL, NATIONALITE, ADRESSE, TELEPHONE, FACULTE, PROMOTION, USERNAME)
+                $req4 = $bdd->query("INSERT INTO tm2(NOM, POST_NOM, PRENOM, EMAIL, LIEU_NAISSANCE, DATE_NAISSANCE, ETAT_CIVIL, NATIONALITE, ADRESSE, TELEPHONE, FACULTE, PROMOTION, USERNAME, OBSERVATION)
                 VALUES ('$nom', '$postnm', '$prenom','$email', '$lieu', '$date', '$etat', '$nationalite', '$adresse', '$tel', '$choix', '$promotion','$user')");
                 if($req4){
                     header('location : login.php');    
@@ -97,7 +97,7 @@ session_start();
                     header('location : login.php');    
                 }
         }
-            // header('location : login.php');
+            header('location : login.php');
         }else{
             echo "une erreur est survenue lors de l'insertion";
         }

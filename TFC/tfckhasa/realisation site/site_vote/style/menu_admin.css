@@ -1,0 +1,76 @@
+body{
+    padding: 0%;
+    margin: 0%;
+}
+.choix>a>img{
+    width:20px;
+    padding-right:7px ;
+}
+.choix>a{
+  
+    color: white;
+}
+
+.choix>h3{
+    color: white;
+    font-size: large;
+    padding: 5px;
+    text-align: center;
+    border-bottom:1px solid white;
+}
+.navigation>.choix>a{
+    margin-top: 1%;
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.navigation>.choix{
+    background-color: #01619E;
+    position: absolute;
+    bottom: 0%;
+    top: 0%;
+}
+.navigation>.choix>.line{
+    border-bottom:1px solid white;
+    padding-bottom: 15px;
+}
+.container{
+    position: absolute;
+    left: 55%;
+    top: 30%;
+    transform:translate(-50%,-50%);
+}
+.affichage{
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+}
+#president{
+    display: none;
+}
+.navigation>.choix>a:hover{
+    color:red;
+}
+.navigation>.choix>a:active {
+    color:rgb(56, 5, 5);
+}
+marquee>center>h3{
+    font-weight: bolder;
+}
+th{
+    padding:5px 25px;
+     background:navy; 
+     color:white; 
+     border-radius:5px;
+}
+td{
+    text-align:center;
+}
+
+@media(max-width:1000px){
+    body{
+        display: none;
+    }
+}

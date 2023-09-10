@@ -1,0 +1,63 @@
+.bande h3{
+    position: absolute;
+    top: 0px;
+    color: white;
+    text-decoration: overline red;
+    left:5px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+.photo-nat{
+    border:2px solid #01619E;
+    text-align:center; 
+    margin:5%;
+    border-radius: 2%;
+}
+.bande{
+    background-color: #01619E;
+    padding: 1px;
+}
+#titre{
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 30px;
+    animation-name: titre;
+    animation-duration: 3s;
+    margin: 1% 20%;
+    padding: 0%;
+    font-weight: bolder;
+}
+
+
+
+
+
+
+@keyframes titre{
+    from{
+        font-size: 10px;
+    }
+    to{
+        font-size: 30px;
+    }
+}
+
+@media(max-width:720px){
+    #titre{
+        font-size: 10px;
+        margin-left: 40%;
+    }
+    @keyframes titre{
+        from{
+            font-size: 5px;
+        }
+        to{
+            font-size: 10px;
+        }
+    }
+    .bande h3{
+       font-size: 10px;
+       top:-10px;
+       
+    }
+}

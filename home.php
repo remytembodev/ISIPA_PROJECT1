@@ -34,6 +34,7 @@ session_start();
     <link rel="stylesheet" href="HOME_PAGE/home.css">
 </head>
 <body>
+
    
         <!-- HEADER -->
         <div class="menubar">
@@ -84,6 +85,29 @@ session_start();
          </div>
        </main>
      <!-- page content -->
+=======
+     <!-- HEADER -->
+     <div class="menubar">
+      <nav>
+        <div class="logo">
+          <img src="INDEX_PAGE/img/logo.jpg" alt="">
+          <h2>ISIPA <span> MATADI</span></h2>
+        </div>
+        <ul>
+          <li><a href="result.php">RESULTAT</a></li>
+          <li><a href="showbooks.php">BIBLIOTHEQUE</a></li>
+          <li><a href="paiement.php" target="_blank">PAIEMENT</a></li>
+        </ul>
+        <a href="logout.php">DECONNEXION</a>
+      </nav>
+    </div>
+    <!-- / HEADER -->
+  <!-- page content -->
+    <main>
+     
+    </main>
+  <!-- page content -->
+
 </body>
 </html>
 

@@ -1,0 +1,72 @@
+@mixin flex{
+    display: flex;
+    align-items: center;
+}
+@mixin flexMid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#affichage-livre{
+    background:#c8c8c8;
+    padding: 20px;
+    .showbooks{
+        @include flex();
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .show{
+            margin: 5px 30px;
+           @include flex();
+           flex-direction: column;
+           justify-content: center;
+           button{
+            margin-top: 1px;
+            width: 100%;
+            font-size: 15px;
+            border: none;
+            border-radius: 4px;
+            background: rgb(116, 114, 114);
+            padding: 2px;
+            color: antiquewhite;
+            cursor: pointer;
+           
+            &:hover{
+                background: rgb(34, 33, 33);
+            }
+           }
+           
+        }
+    }
+}
+@media (max-width:1000px){
+  #affichage-livre{
+    .show{
+        img{
+            width: 106px;
+            height: 106px;
+        }
+        button{
+            width: 85px;
+        }
+          }
+  }  
+}
+@media (max-width:650px){
+    #affichage-livre{
+        .showbooks{
+            @include flex();
+            justify-content: center;
+            flex-direction: column;
+            .show{
+                width: 55%;
+                margin-top: 30px;
+                img{
+                    width: 600px;
+                    height: 400px;
+                }
+
+            }
+        }
+      }   
+}

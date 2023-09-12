@@ -3,7 +3,7 @@ session_start();
     include('bdd.php');
     $student = $_GET['student'];
     $_SESSION['student'] = $student; 
-    $check_student = $bdd->prepare("SELECT NOM, POST_NOM, PRENOM, EMAIL, LIEU_NAISSANCE, DATE_NAISSANCE, ETAT_CIVIL, NATIONALITE, ADRESSE, TELEPHONE, CHOIX, PROMOTION FROM inscription WHERE iduser= ?");
+    $check_student = $bdd->prepare("SELECT NOM, POST_NOM, PRENOM, EMAIL, LIEU_NAISSANCE, DATE_NAISSANCE, ETAT_CIVIL, NATIONALITE, ADRESSE, TELEPHONE, CHOIX, PROMOTION, photo FROM inscription WHERE iduser= ?");
     $check_student->execute(array($student));
     $data_student = $check_student->fetch();
     $row_student = $check_student->rowCount();
@@ -20,6 +20,7 @@ session_start();
         $tel = $data_student['TELEPHONE'];
         $choix = $data_student['CHOIX'];
         $promotion = $data_student['PROMOTION'];
+        $photo = $data_student['photo'];
         $user = $_SESSION['user'];
         if (($choix === 'TM') and ($promotion === 'G1')){
             $observe = 'TM1';
@@ -30,11 +31,11 @@ session_start();
         if (($choix === 'TM') and ($promotion === 'G3')){
             $observe = 'TM3';
         }
-        $req2 = $bdd->query("INSERT INTO etudiant(NOM, POST_NOM, PRENOM, EMAIL, LIEU_NAISSANCE, DATE_NAISSANCE, ETAT_CIVIL, NATIONALITE, ADRESSE, TELEPHONE, FACULTE, PROMOTION, USERNAME, OBSERVATION)
+        $req2 = $bdd->query("INSERT INTO etudiant(NOM, POST_NOM, PRENOM, EMAIL, LIEU_NAISSANCE, DATE_NAISSANCE, ETAT_CIVIL, NATIONALITE, ADRESSE, TELEPHONE, FACULTE, PROMOTION, USERNAME, OBSERVATION, PHOTO)
    
    
    
-        VALUES ('$nom', '$postnm', '$prenom','$email', '$lieu', '$date', '$etat', '$nationalite', '$adresse', '$tel', '$choix', '$promotion','$user','$observe')");
+        VALUES ('$nom', '$postnm', '$prenom','$email', '$lieu', '$date', '$etat', '$nationalite', '$adresse', '$tel', '$choix', '$promotion','$user','$observe', '$photo')");
         if($req2){
             if (($choix==='TM') && ($promotion==='G1')){
                 $req3 = $bdd->query("INSERT INTO tm1(NOM, POST_NOM, PRENOM, EMAIL, LIEU_NAISSANCE, DATE_NAISSANCE, ETAT_CIVIL, NATIONALITE, ADRESSE, TELEPHONE, FACULTE, PROMOTION, USERNAME, OBSERVATION)

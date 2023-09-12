@@ -1,6 +1,7 @@
 <?php
 session_start();
     include('bdd.php');
+    $photo = $_SESSION['photo'];     
     $user = $_SESSION['utilisateur'];
     if ($user){
         // $name = $_GET['name'];
@@ -37,7 +38,8 @@ session_start();
         $techno = $show['TECHNO'];
         $percent = $show['PERCENT'];
         $mention = $show['MENTION'];
-     
+       
+
     }else{
       header('location:index.php');
 }
@@ -57,7 +59,7 @@ session_start();
      <div class="menubar">
       <nav>
         <div class="logo">
-          <img src="INDEX_PAGE/img/logo.jpg" alt="">
+          <img src="INDEX_PAGE/img/telechargement.png" alt="">
           <h2>ISIPA <span> MATADI</span></h2>
         </div>
         <ul>
@@ -70,11 +72,12 @@ session_start();
     </div>
     <!-- / HEADER -->
   <!-- page content -->
+
     <main>
     <center>  
       <div class="container" style="margin-top:4%">
         <div class="center">
-            <img src="Home_PAGE/img/avatar.jpg" alt="" style="border-radius:50%">
+            <img src="<?= $photo ?>" alt="" style="border-radius:50%; width:15%;height:25Vh;">
             <div class="name">
               <p>Nom : <?php echo $nom;  ?></p>
               <p>Post-Nom : <?php echo $post;  ?></p>
@@ -103,10 +106,13 @@ session_start();
             <label for="">FRANCAIS : <?php echo $francais;?></label> 
             <label for="">PROJET : <?php echo $projet;?></label> 
             <label for="">TECHNOLOGIE DES COMPOSANTS : <?php echo $techno;?></label> 
+            <label for="">POURCENTAGE : <?php echo $percent;?></label> 
+            <label for="">MENTION : <?php echo $mention;?></label> 
         </div>  
        
        </div>
     </main>
+
   <!-- page content -->
 </body>
 </html>

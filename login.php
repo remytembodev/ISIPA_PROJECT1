@@ -26,7 +26,7 @@ if (isset($_POST['envoi'])){
                         header("location:adminstore.php");
                     }else
                     if($level == 'admindepart'){
-                        header("location:admindepart.php");
+                        header("location:inter.php");
                     }else
                     if ($level == 'adminsect'){
                         header("location:adminsection.php");

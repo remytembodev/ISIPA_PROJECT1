@@ -32,7 +32,10 @@ if(isset($_POST['envoi'])){
     $choix=htmlspecialchars($_POST['choix']);
     $promotion=htmlspecialchars($_POST['promotion']);
     $image = $_FILES['image']['name'];
-    $image_tmp = $_FILES['image_tmp']['tmp'];
+    $image_tmp = $_FILES['image']['tmp_name'];
+
+    move_uploaded_file($image_tmp,"./images/".$image);
+    $chemin_image = "./images/$image";
 
     if((!empty($nom)) and (!empty($postnm)) and (!empty($prenom)) and (!empty($email)) and (!empty($lieu)) and (!empty($date)) and (!empty($etat)) and 
     (!empty($nationalite)) and (!empty($pere)) and (!empty($mere))and (!empty($province)) and (!empty($district)) and (!empty($territoire))
@@ -44,8 +47,7 @@ if(isset($_POST['envoi'])){
         $third = $prenom[0];
         $prom = $promotion;
         $user = $isipa.$first.$second.$third.$prom;
-        move_uploaded_file($image_tmp,"./images/".$image);
-        $chemin_image = ".images/$image";
+       
         $req = $bdd->query("INSERT INTO inscription (iduser,NOM, POST_NOM, PRENOM, EMAIL, LIEU_NAISSANCE,DATE_NAISSANCE, ETAT_CIVIL, NATIONALITE, PERE,
          MERE, PROVINCE, DISTRICT, TERRITOIRE, ADRESSE, TELEPHONE, ECOLE, PROVINCE_ECOLE, TERRITOIRE_ECOLE, SECTION, CENTRE,
          ANNEE_DIPLOME, ACTIVITE,ANNEE_ACADEMIQUE, TITRE_ACADEMIQUE, ETABLISSEMENT,ANNEE_ETUDE, MENTION, CHOIX, PROMOTION, Date_Inscription,photo) 

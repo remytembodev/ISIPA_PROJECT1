@@ -20,7 +20,7 @@
     <div class="menubar">
       <nav>
         <div class="logo">
-          <img src="INDEX_PAGE/img/logo.jpg" alt="">
+          <img src="INDEX_PAGE/img/telechargement.png" alt="">
           <h2>ISIPA <span> MATADI</span></h2>
         </div>
         <ul class="navlinks">
